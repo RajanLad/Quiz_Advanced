@@ -35,7 +35,7 @@ public abstract class CommonDAO<T>{
 	//C
 	@Transactional(Transactional.TxType.REQUIRED)
 	public void create(T entity) {
-		LOGGER.info("entering the create method");
+		LOGGER.info("entering the QUESTIONABC create method");
 		em.persist(entity); 
 		LOGGER.info("exiting the create method");
 	}
@@ -59,6 +59,12 @@ public abstract class CommonDAO<T>{
 	@Transactional(Transactional.TxType.REQUIRED)
 	public void update(T entity) {
 		em.merge(entity);
+	}
+	
+	//D
+	@Transactional(Transactional.TxType.REQUIRED)
+	public void delete(T entity) {
+		em.remove(entity); 
 	}
 	
 	//A

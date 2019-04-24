@@ -50,10 +50,10 @@ public class TestClass {
 		quizDS.createQuestionAndChoices(question, choice1, choice2);
 		
 		//then
-		ChoiceModel criteria = new ChoiceModel();
-		criteria.setQuestionReference(question);
-		List<ChoiceModel> searchResults = choicesDAO.search(criteria);
-		Assert.assertTrue(!searchResults.isEmpty());
+//		ChoiceModel criteria = new ChoiceModel();
+//		criteria.setQuestionReference(question);
+//		List<ChoiceModel> searchResults = choicesDAO.search(criteria);
+//		Assert.assertTrue(!searchResults.isEmpty());
 		
 		
 		//Other way to use stream without lambdas
