@@ -13,6 +13,19 @@
       	 http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+		<bean id="firstQuery" class="java.lang.String">
+		<constructor-arg>
+			<value>select * from Questions</value>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="secondQuery" class="java.lang.String">
+		<constructor-arg>
+			<value>select * from Answers</value>
+		</constructor-arg>
+	</bean>
+
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
@@ -38,11 +51,11 @@
 
 	<bean id="professorDAO"
 		class="com.epita.fr.quizAJ.DAO.ProfessorDAO" />
-	<bean id="questionsDAO"
+	<bean id="questionDAO"
 		class="com.epita.fr.quizAJ.DAO.QuestionsDAO" />
 	<bean id="studentDAO"
 		class="com.epita.fr.quizAJ.DAO.StudentDAO" />
-		<bean id="choicesDAO"
+		<bean id="choiceDAO"
 		class="com.epita.fr.quizAJ.DAO.ChoicesDAO" />
 	<bean id="quizDataService" 
 		class="com.epita.fr.quizAJ.Services.QuizDataService" />
@@ -53,7 +66,7 @@
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan"
-			value="fr.epita.quiz.datamodel" />
+			value="com.epita.fr.quizAJ.datamodels" />
 		<property name="jpaVendorAdapter">
 			<bean
 				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />

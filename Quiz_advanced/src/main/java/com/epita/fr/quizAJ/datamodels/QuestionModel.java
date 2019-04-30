@@ -8,9 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Questions")
+@Table(name="QUESTIONS")
 public class QuestionModel {
 
+	public QuestionModel() {
+
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="Q_ID")
@@ -18,10 +22,6 @@ public class QuestionModel {
 	
 	@Column(name="Q_CONTENT")
 	private String q_content; 
-
-	public QuestionModel() {
-
-	}
 	
 	public Integer getId() {
 		return q_id;

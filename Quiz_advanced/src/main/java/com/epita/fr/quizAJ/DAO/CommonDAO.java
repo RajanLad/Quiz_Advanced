@@ -36,7 +36,16 @@ public abstract class CommonDAO<T>{
 	@Transactional(Transactional.TxType.REQUIRED)
 	public void create(T entity) {
 		LOGGER.info("entering the QUESTIONABC create method");
-		em.persist(entity); 
+//		try
+//		{
+//			em.getTransaction().begin();
+			em.persist(entity);
+//			em.getTransaction().commit();
+//		}
+//		catch(Exception e) 
+//		{
+//			System.out.println("The error is : "+e);
+//		} 
 		LOGGER.info("exiting the create method");
 	}
 	
