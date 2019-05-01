@@ -1,0 +1,22 @@
+<p>
+  question-list works!
+</p>
+
+<table>
+
+  <tr>
+
+
+
+  </tr>
+
+  <tr *ngFor='let question of questionList'>
+    
+    <th >Question : {{ question.content }}</th>
+
+    <th *ngFor='let choice of choiceList'>----->>{{ choice.content }}</th>
+
+  </tr>
+
+
+</table>

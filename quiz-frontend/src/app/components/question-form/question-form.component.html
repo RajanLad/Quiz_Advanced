@@ -1,0 +1,16 @@
+<form>
+  <input [(ngModel)]="question.content" type=text name=content/>
+</form>
+
+<button (click) = 'save()'>
+  <label>AddQuestion</label>
+</button>
+
+
+<form>
+  <input [(ngModel)]="choice.content" type=text name=content/>
+</form>
+
+<button (click) = 'saveChoice()'>
+  <label>AddChoice</label>
+</button>
