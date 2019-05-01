@@ -3,7 +3,7 @@ package com.epita.fr.quizAJ.datamodels;
 import javax.persistence.*;
 
 @Entity
-@Table(name="ADMIN")
+@Table(name="Professor")
 
 public class ProfessorModel {
 

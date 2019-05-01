@@ -65,8 +65,8 @@ public class TestClass {
 //			}
 //		});
 		
-//		List<Choice> subList = searchResults.stream()
-//				.filter(c -> c.getText().equals(firstChoiceText))
+//		List<ChoiceModel> subList = searchResults.stream()
+//				.filter(c -> c.getChoice_opt().equals(firstChoiceText))
 //				.collect(Collectors.toList());
 //		
 //		Assert.assertEquals(1, subList.size());

@@ -17,7 +17,7 @@ public class QuestionsDAO extends CommonDAO<QuestionModel>
 	public void prepareSearch(QuestionModel criteria, GenericQueryHolder<QuestionModel> holder) {
 		// TODO Auto-generated method stub
 		LOGGER.info("entering the create method");
-		holder.setQueryString("from Question as q where q.content like :content"); 
+		holder.setQueryString("from Question as q where q.Q_CONTENT like :content"); 
 		holder.setClassName(QuestionModel.class);
 		holder.putParameter("content", "%" +  criteria.getContent() + "%");
 	}
@@ -27,5 +27,6 @@ public class QuestionsDAO extends CommonDAO<QuestionModel>
 		// TODO Auto-generated method stub
 		
 	}
+	
 	
 }

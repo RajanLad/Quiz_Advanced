@@ -22,7 +22,7 @@
 
 	<bean id="secondQuery" class="java.lang.String">
 		<constructor-arg>
-			<value>select * from Answers</value>
+			<value>select * from Choice</value>
 		</constructor-arg>
 	</bean>
 

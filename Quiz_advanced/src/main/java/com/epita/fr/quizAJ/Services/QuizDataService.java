@@ -1,6 +1,7 @@
  package com.epita.fr.quizAJ.Services;
 
 import javax.inject.Inject;
+import java.util.*;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -46,4 +47,6 @@ public class QuizDataService
 			choiceDAO.create(choice);
 		}
 	}
+	
+
 }

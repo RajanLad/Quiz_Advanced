@@ -21,7 +21,7 @@ public class ChoiceModel {
 	@ManyToOne
 	QuestionModel questionReference; 
 	
-	@Column(name="Choice")
+	@Column(name="ChoiceContent")
 	String choice_opt;
 	
 	@Column(name="Choice_Number")
